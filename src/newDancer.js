@@ -2,19 +2,23 @@
 var makeNewDancer = function(top, left, timeBetweenSteps){
   
   Dancer.call(this, top, left, timeBetweenSteps)
+  this.$node.append("<img src=http://38.media.tumblr.com/961a28beb9afc75ccf5d7c4e4580b33c/tumblr_n70j79rywc1qcc8dao1_500.gif>")
 
 };
 
 makeNewDancer.prototype = Object.create(Dancer.prototype);
 makeNewDancer.prototype.constructor = makeNewDancer;
 makeNewDancer.prototype.step = function(){
-    // call the old version of step at the beginning of any call to this new version of step
-    // this.oldStep();
-    // toggle() is a jQuery method to show/hide the <span> tag.
-    // See http://api.jquery.com/category/effects/ for this and
-    // other effects you can use on a jQuery-wrapped html tag.
-    Dancer.prototype.step.call(this);
-    this.$node.toggle();
-  };
+  Dancer.prototype.step.call(this);
+  var x = Math.random(0,1) * 500;
+    console.log(window.width)
+      var y = Math.random(0,1) * 1500;
+    $('.dancer').animate(
+      {left: x+'px', top: y+'px'},200)
+};
 
-
+makeNewDancer.prototype.lineUp = function() {
+    Dancer.prototype.lineUp.call(this);
+    var location = $('body').width() * 0.40;
+    this.$node.css('left', location)
+}

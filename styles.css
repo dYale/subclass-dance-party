@@ -4,7 +4,7 @@ body, html{
 body{
   margin: 0px;
   background-color:#444;
-  background-image: url(http://2.media.dorkly.cvcdn.com/13/89/336a28215c215237ff39636e06e035cb.gif);
+  background-image: url(http://utahlivebands.com/wp-content/uploads/2014/05/dance-party-2014.jpg);
   font-size: 18px;
 }
 body, a:link, a:visited, a:active{
@@ -23,11 +23,22 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 .dancer{
-  border:10px solid red;
   border-radius:10px;
   position:absolute;
+
 }
 
-span{
-  color: pink;
+.button{
+  font-size: 20px;
+  background-size: 25px;
+  background color: #DCDCDC;
+  border-radius: 25px;
+  cursor: pointer;
 }
+
+.button:hover{
+  background-color: white;
+  font-size:60px;
+}
+
+\
