@@ -26,9 +26,6 @@ $(document).ready(function(){
       }
     });
 
-
-  if(
-
   $('.dancer').on('click',function(){
     var num = Math.random(0,1) * 1000;
     console.log(num)
@@ -39,6 +36,8 @@ $(document).ready(function(){
     }
   })
 
-
-  })
 });
+
+
+})
+
